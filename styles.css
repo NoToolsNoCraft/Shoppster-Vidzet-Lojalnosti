@@ -1,0 +1,434 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.container h1 {
+  font-size: 32px;
+  color: white;
+  text-align: center;
+  margin-bottom: 24px;
+  background: linear-gradient(90deg, #e02424, #1f2937);
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.landing-section {
+  margin-bottom: 40px;
+}
+
+.landing-block {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 32px;
+  background-color: #f9fafb;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.landing-left, .landing-right {
+  flex: 1;
+}
+
+.landing-left h2, .landing-right h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 12px;
+}
+
+.landing-left p, .landing-right p {
+  font-size: 16px;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+.login-prompt {
+  text-align: center;
+  padding: 16px;
+  background-color: #fef2f2;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+.login-prompt p {
+  color: #b91c1c;
+  font-size: 18px;
+}
+
+.mock-content {
+  margin-bottom: 40px;
+}
+
+.mock-content h2 {
+  font-size: 24px;
+  color: #1f2937;
+  margin-bottom: 16px;
+}
+
+.action-card {
+  background-color: #f9fafb;
+  padding: 16px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.action-card h3 {
+  font-size: 18px;
+  color: #1f2937;
+  margin-bottom: 8px;
+}
+
+.action-card p {
+  color: #4b5563;
+  margin-bottom: 12px;
+}
+
+.action-card button {
+  background-color: #e02424;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.action-card button:hover {
+  background-color: #c01818;
+}
+
+.contact-section {
+  text-align: center;
+  padding: 24px;
+  background-color: #f9fafb;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 12px;
+}
+
+.contact-section p {
+  font-size: 16px;
+  color: #4b5563;
+  margin-bottom: 16px;
+}
+
+.contact-button {
+  display: inline-block;
+  background-color: #e02424;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.contact-button:hover {
+  background-color: #c01818;
+}
+
+.copyright {
+  text-align: center;
+  padding: 16px 0;
+  font-size: 14px;
+  color: #4b5563;
+}
+
+#loyalty-widget-button {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  background-color: #e02424;
+  color: white;
+  padding: 12px 16px;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+}
+
+#loyalty-widget-button:hover {
+  background-color: #c01818;
+}
+
+#loyalty-widget-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 350px;
+  height: 100vh;
+  background-color: white;
+  box-shadow: -4px 0 6px rgba(0, 0, 0, 0.1);
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 1001;
+}
+
+#loyalty-widget-panel.open {
+  transform: translateX(0);
+}
+
+#loyalty-widget-panel .panel-content {
+  padding: 24px;
+  height: calc(100vh - 48px); /* Account for padding */
+  overflow-y: auto;
+}
+
+#loyalty-widget-panel .close-button {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background-color: #f9fafb;
+  border: 1px solid #d1d5db;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  line-height: 1;
+  color: #4b5563;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+#loyalty-widget-panel .close-button:hover {
+  background-color: #e02424;
+  color: white;
+  border-color: #e02424;
+}
+
+#loyalty-widget-panel h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.login-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.login-section input {
+  padding: 8px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.login-section button {
+  background-color: #e02424;
+  color: white;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-section button:hover {
+  background-color: #c01818;
+}
+
+.login-error {
+  color: #b91c1c;
+  font-size: 14px;
+  text-align: center;
+  margin-top: -8px;
+}
+
+.promo-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.promo-intro {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+  text-align: center;
+}
+
+.promo-benefit {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #f9fafb;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.promo-benefit .promo-icon {
+  font-size: 24px;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.promo-benefit div {
+  flex: 1;
+}
+
+.promo-benefit h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0;
+}
+
+.promo-benefit p {
+  font-size: 14px;
+  color: #4b5563;
+  line-height: 1.5;
+  margin: 4px 0 0;
+}
+
+.promo-cta {
+  font-size: 16px;
+  color: #1f2937;
+  text-align: center;
+  font-style: italic;
+}
+
+.progress-section {
+  margin-bottom: 24px;
+}
+
+.progress-section p {
+  color: #4b5563;
+  margin-bottom: 8px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 16px;
+  background-color: #e5e7eb;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background-color: #e02424;
+  transition: width 1s ease-out;
+}
+
+.tier-section {
+  margin-bottom: 24px;
+}
+
+.tier-section h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 12px;
+}
+
+.tier-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tier {
+  text-align: center;
+}
+
+.tier-badge {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  font-size: 24px;
+}
+
+.tier-bronze { background-color: #cd7f32; color: white; }
+.tier-silver { background-color: #d1d5db; color: #4b5563; }
+.tier-gold { background-color: #d4af37; color: white; }
+.tier-locked { background-color: #d1d5db; color: #4b5563; }
+
+.tier p {
+  font-size: 14px;
+  margin-top: 4px;
+  color: #4b5563;
+}
+
+.missions-section h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 12px;
+}
+
+.missions-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.mission {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  background-color: #f9fafb;
+  border-radius: 4px;
+  color: #4b5563;
+  font-size: 14px;
+}
+
+.mission span {
+  flex-shrink: 0;
+}
+
+.mission-empty {
+  grid-column: span 2;
+  text-align: center;
+  color: #4b5563;
+  padding: 8px;
+}
+
+@media (max-width: 640px) {
+  #loyalty-widget-panel {
+    width: 100%;
+  }
+  .container {
+    padding: 16px;
+  }
+  .landing-block {
+    flex-direction: column;
+    gap: 16px;
+  }
+}

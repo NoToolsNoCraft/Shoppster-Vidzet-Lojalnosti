@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shoppster Program Lojalnosti</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="widget.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Shoppster Vidžet Lojalnosti</h1>
+    
+    <div class="login-prompt">
+      <p>Molimo prijavite se da biste počeli sakupljati bodove!</p>
+    </div>
+    
+    <div class="mock-content" style="display: none;">
+      <h2>Dostupne Akcije</h2>
+      <div class="action-card">
+        <h3>Kupite Proizvod</h3>
+        <p>Zarađujete 50 bodova za svaku kupovinu koju obavite.</p>
+        <button onclick="simulateAction('Kupite proizvod', 50)">Kupi Sada</button>
+      </div>
+      <div class="action-card">
+        <h3>Napišite Recenziju</h3>
+        <p>Zarađujete 20 bodova dijeljenjem vašeg mišljenja.</p>
+        <button onclick="simulateAction('Napišite recenziju', 20)">Napiši Recenziju</button>
+      </div>
+      <div class="action-card">
+        <h3>Preporučite Prijatelja</h3>
+        <p>Zarađujete 30 bodova za svakog prijatelja kojeg preporučite.</p>
+        <button onclick="simulateAction('Preporučite prijatelja', 30)">Preporuči Sada</button>
+      </div>
+    </div>
+
+    <div class="landing-section">
+      <div class="landing-block">
+        <div class="landing-left">
+          <h2>Šta je Shoppster Vidžet Lojalnosti?</h2>
+          <p>Naš Vidžet za Praćenje Napretka Lojalnosti je vaš put ka ekskluzivnim nagradama! Ovaj elegantan, interaktivan alat omogućava vam praćenje bodova, otključavanje nivoa (Bronzani, Srebrni, Zlatni) i zarađivanje uzbudljivih pogodnosti poput besplatne dostave, popusta i VIP podrške za svaku akciju na Shoppster-u.</p>
+        </div>
+        <div class="landing-right">
+          <h2>Zašto Vidžet sa Kliznim Panelom?</h2>
+          <p>Klizni vidžet je dizajniran za praktičnost i angažman. Uvek je na samo jedan klik udaljenosti, uredno smešten na vašem ekranu, i klizi kako bi prikazao vaš napredak bez ometanja iskustva kupovine. Intuitivan je, nenametljiv i motivira vas da zarađujete više!</p>
+        </div>
+      </div>
+      <div class="landing-block">
+        <div class="landing-left">
+          <h2>Marketinška Vrijednost za Shoppster</h2>
+          <p>Vidžet povećava angažman kupaca gamifikacijom iskustva kupovine. Podstiče ponovne kupovine, recenzije i preporuke, jačajući lojalnost brendu. Sa modernim dizajnom i ažuriranjima u realnom vremenu, stvara uzbuđenje i drži Shoppster u fokusu kupaca.</p>
+        </div>
+        <div class="landing-right">
+          <h2>Vrijednost Lojalnosti za Vas</h2>
+          <p>Kao Shoppster kupac, nagrađeni ste za svaku interakciju. Zarađujte bodove kupovinom, pisanjem recenzija ili preporukom prijatelja, i penjite se na nivoe kako biste otključali ekskluzivne pogodnosti. Vidžet olakšava praćenje napretka i preuzimanje nagrada, čineći svaku kupovinu isplativijom!</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-section">
+      <h2>Zainteresovani za Ovaj Vidžet na Vašem Veb Sajtu?</h2>
+      <p>Želite povećati angažman kupaca sa Shoppster Vidžetom Lojalnosti? Kontaktirajte me slobodno da razgovaramo o implementaciji!</p>
+      <a href="https://www.linkedin.com/in/petar-skrbic/" target="_blank" class="contact-button">Kontaktirajte putem LinkedIn-a</a>
+    </div>
+
+    <div class="copyright">
+      <p>&copy; 2025 Petar Skrbić. Sva prava zadržana.</p>
+    </div>
+  </div>
+  
+  <div id="loyalty-widget-root"></div>
+</body>
+</html>
